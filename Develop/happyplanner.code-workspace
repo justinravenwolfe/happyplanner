@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "../../happyplanner"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../Assets"
+		},
+		{
+			"path": "../.vscode"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Develop",
+		"liveServer.settings.port": 5507
+	}
+}

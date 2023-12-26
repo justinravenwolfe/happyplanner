@@ -20,16 +20,40 @@
   //
   // TODO: Add code to display the current date in the header of the page.
   //Waits untill all elements are there
+
+  //Array 
+  //dayjs()<- object, time, date
+  var curr_day = dayjs().format('YYYY-MM-DD'); 
+  var nine = dayjs(curr_day + "T09:00:00");
+  var ten = dayjs(curr_day + "T10:00:00");
+  var eleven = dayjs(curr_day + "T11:00:00");
+  var twelve = dayjs(curr_day + "T12:00:00");
+  var one = dayjs(curr_day + "T13:00:00");
+    var two = dayjs(curr_day + "T14:00:00");
+    var three = dayjs(curr_day + "T15:00:00");
+    var four = dayjs(curr_day + "T16:00:00");
+    var five = dayjs(curr_day + "T17:00:00");
+    //List of the dayjs objects as hours. 
+    var work_hours = [nine,ten,eleven,twelve,one,two,three,four,five];
+    var hour_index = 0; 
   $(document).ready(function(){
-
-    $('.text-block').each(function(){
+   
+    $('.time-block').each(function(index,element){
+      //'mm -dd-yyy hh:mm:ss' 
       //Lookup the current time
-      var curr_time = dayjs(); 
+      var curr_hour = dayjs(); 
+      //Within current hour <- Red<- add class Past<- 12pm
+      if(curr_hour.isSame(work_hours[hour_index]))
+      {
+        $(this).addClass('present'); 
+      }else if(curr_hour.isBefore(work_hours[hour_index])){
+        $(this).addClass('future');
+      }else{
+        $(this).addClass('past'); 
+      }
 
-      //Within current hour <- Red<- add class Past
-
+      hour_index++;
       //Before current hour <- grey- add class Present
-
       //After current hour <- green - add class Future
 
     }); 

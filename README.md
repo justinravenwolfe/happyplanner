@@ -28,3 +28,8 @@ The "future" class adds a green background color
 Linking in jquery
 Linking in the javascript file
 
+CSS
+Background is transparent
+Pre wrap
+
+

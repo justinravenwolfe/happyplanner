@@ -1,4 +1,7 @@
 # happyplanner
+https://justinravenwolfe.github.io/happyplanner/
+git@github.com:justinravenwolfe/happyplanner.git
+
 Javascript
 Make an array
 day js

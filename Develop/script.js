@@ -40,13 +40,13 @@
    
     $('.time-block').each(function(index,element){
       //'mm -dd-yyy hh:mm:ss' 
-      //Lookup the current time
-      var curr_hour = dayjs(); 
+      //Lookup the current time and format it the standard paradigm we've been using 
+      var curr_hour = dayjs().format('YYYY-MM-DDTHH:mm:ss'); 
       //Within current hour <- Red<- add class Past<- 12pm
-      if(curr_hour.isSame(work_hours[hour_index]))
+      if(curr_hour.isSame(work_hours[hour_index], 'hour'))
       {
         $(this).addClass('present'); 
-      }else if(curr_hour.isBefore(work_hours[hour_index])){
+      }else if(curr_hour.isBefore(work_hours[hour_index], 'hour')){
         $(this).addClass('future');
       }else{
         $(this).addClass('past'); 

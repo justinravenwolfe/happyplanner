@@ -1,6 +1,6 @@
 # happyplanner
 https://justinravenwolfe.github.io/happyplanner/
-git@github.com:justinravenwolfe/happyplanner.git
+https://github.com/justinravenwolfe/happyplanner
 
 Javascript
 Make an array
